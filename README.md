@@ -8,22 +8,21 @@
 |email|text|null: false, unique: true|
 
 ### Assosiation
-has_many :groups
-has_many :messages
-has_many :members
+- has_many :groups, through: members
+- has_many :messages
+- has_many :members
 
 ## groups table
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
-|user_id|integer|null: false, foreign_key: true|
 
 ### Assosiation
 
-has_many :users
-has_many :messages
-has_many :members
+- has_many :users, through: members
+- has_many :messages
+- has_many :members
 
 ## messages table
 
@@ -36,8 +35,8 @@ has_many :members
 
 ### Association
 
-belongs_to :user
-belongs_to :groups
+- belongs_to :user
+- belongs_to :groups
 
 ## members table
 
@@ -47,5 +46,5 @@ belongs_to :groups
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-belongs to :group
-belongs_to :user
+- belongs to :group
+- belongs_to :user
