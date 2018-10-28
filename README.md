@@ -17,7 +17,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
-|user_id|integer|null: false, foreign_key: true|
 
 ### Assosiation
 
