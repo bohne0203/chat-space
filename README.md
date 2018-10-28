@@ -37,18 +37,20 @@ has_many :groups
 has_many :messages
 has_many :members
 
-<!-- ## groups table
+## groups table
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
 |user_id|integer|null: false, foreign_key: true|
 
+###Assosiation
+
 has_many :users
 has_many :messages
 has_many :members
 
-## messages table
+<!-- ## messages table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -65,4 +67,4 @@ has_many :members
 
 ###Association
 - belongs to :group
-- belongs_to :user -->
+- belongs_to :user --> -->
