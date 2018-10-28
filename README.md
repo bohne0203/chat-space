@@ -64,7 +64,7 @@ has_many :members
 belongs_to :user
 belongs_to :groups
 
-<!-- ## members table
+## members table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -72,6 +72,5 @@ belongs_to :groups
 |group_id|integer|null: false, foreign_key: true|
 
 ###Association
-- belongs to :group
-- belongs_to :user --> -->
- -->
+belongs to :group
+belongs_to :user
