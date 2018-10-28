@@ -7,7 +7,7 @@
 |name|string|null: false,index: true|
 |email|text|null: false, unique: true|
 
-###Assosiation
+### Assosiation
 has_many :groups
 has_many :messages
 has_many :members
@@ -19,7 +19,7 @@ has_many :members
 |name|string|null: false, index: true|
 |user_id|integer|null: false, foreign_key: true|
 
-###Assosiation
+### Assosiation
 
 has_many :users
 has_many :messages
@@ -34,7 +34,7 @@ has_many :members
 |user_id|integer|null: false,foreign_key: true|
 |groups_id|integer|null: false,foreign_key: true|
 
-###Association
+### Association
 
 belongs_to :user
 belongs_to :groups
@@ -46,6 +46,6 @@ belongs_to :groups
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
+### Association
 belongs to :group
 belongs_to :user
