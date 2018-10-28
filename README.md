@@ -50,15 +50,21 @@ has_many :users
 has_many :messages
 has_many :members
 
-<!-- ## messages table
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
 |image|string|------|
-|user_id|integer|
+|user_id|integer|null: false,foreign_key: true|
+|groups_id|integer|null: false,foreign_key: true|
 
-## members table
+###Association
+
+belongs_to :user
+belongs_to :groups
+
+<!-- ## members table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -68,3 +74,4 @@ has_many :members
 ###Association
 - belongs to :group
 - belongs_to :user --> -->
+ -->
