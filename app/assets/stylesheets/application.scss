@@ -1,49 +1,84 @@
 @import "./reset";
+@import "./clearfix";
 $white:#FFFFFF;
+$skyblue:#38AEF0;
 
 .wrapper{
-  width:100vw;
-  height:100vh;
-}
-.side-bar {
-  background-color:#2f3e51;
-  width:300px;
-  height: 100vh;
+  display: flex;
 
-  .header {
-    background-color: #253141;
-    line-height:100px;
-    padding: 0 20px;
+  .side-bar {
+    background-color:#2f3e51;
+    width:300px;
+    height: 100vh;
 
-    .name{
-      font-size: 16px;
-      font-weight: bold;
-      color: $white;
+    .header {
+      background-color: #253141;
+      line-height:100px;
+      padding: 0 20px;
+
+      .name{
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .messages {
+      height: 100px;
+      padding: 0 20px;
+
+      .group{
+        color: $white;
+        font-size: 15px;
+        padding-top: 20px;
+      }
+      .recent-message{
+        color: $white;
+        font-size: 11px;
+        padding: 5px 0 20px;
+      }
     }
   }
 
-  .messages {
-    height: 100px;
-    padding: 0 20px;
+  .chat {
+   background-color: $white;
+   width: calc(100% - 300px);
 
-    .group{
-      color: $white;
-      font-size: 15px;
-      padding-top: 20px;
+    .header{
+      background-color: $white;
+      height:100px;
+      border-bottom: 1px solid #eeeeee;
+      padding: 0 40px 0;
+
+      .group-name{
+        @include clearfix();
+        color: #333333;
+        font-size: 20px;
+        padding-top: 35px;
+        float:left;
+      }
+
+      .member-list{
+        color: #999999;
+        font-size: 12px;
+
+        .member{
+          display:inline;
+          padding-top: 15px;
+        }
+      }
     }
-    .recent-message{
-      color: $white;
-      font-size: 11px;
-      padding: 5px 0 20px;
+    .edit-button{
+      border: 1px solid $skyblue;
+      height:40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding:0 20px;
+      float:right;
+      display: inline;
+      color: $skyblue
+
     }
   }
+
 }
-
-
-
-
-.chat {
- background-color:#AAAAAA;
- width:calc(100% - 300px);
-}
-
