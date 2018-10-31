@@ -9,6 +9,11 @@
         %div.header
           %h3.name
             seo
+          %ul.header-icon
+            %li.icon
+              %a
+                %i.fa.fa-edit
+                %i.fa.fa-cog
         %div.messages
           %a
             %div.group
@@ -53,10 +58,11 @@
             ここにチャットが入る
         %div.form
           %form.chat
-            %input.text{placeholder:"type a message"}
-          %div.send-button
-            %a
-              Send
+            %input.message{type: "text", placeholder: "type a message", name: "message-content"}
+              %label.upload-label{for: "upload-icon"}
+                %i.fa.fa-image
+                %input#upload-icon.hidden-icon{type: "file", name: "image-content", style: "display: none"}
+          %input.send-button{type: "submit",value:"Send"}
 
 
   %footer

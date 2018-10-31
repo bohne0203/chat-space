@@ -1,6 +1,7 @@
 @import "./reset";
 @import "./clearfix";
 @import "./padding";
+@import "font-awesome";
 $white:#FFFFFF;
 $skyblue:#38AEF0;
 
@@ -22,6 +23,24 @@ $skyblue:#38AEF0;
         font-size: 16px;
         font-weight: bold;
         color: $white;
+        display:inline-block;
+      }
+
+      .header-icon{
+        display: inline-block;
+        float:right;
+
+        .icon{
+
+          .fa.fa-edit{
+            font-size:16px;
+            color: $white;
+          }
+          .fa.fa-cog{
+            font-size:16px;
+            color: $white;
+          }
+        }
       }
     }
 
@@ -159,18 +178,32 @@ $skyblue:#38AEF0;
 
       .chat{
         height:50px;
-        width:calc(100% - 125px);
+        width:calc(100% - 116px);
         box-sizing: border-box;
         display: inline-block;
 
 
-        .text{
+        .message{
           height:100%;
-          width:100%;
+          width:calc(100% - 45px);
           border:none;
           font-size: 16px;
           color: #434A54;
           padding-left: 10px;
+          display: inline-block;
+
+          .form_mask{
+            height:50px;
+            float:left;
+            display: inline-block;
+            padding-right: 10px;
+            width:20px;
+
+            .fa.fa-image{
+              float:right;
+              font-size: 30px;
+            }
+          }
         }
       }
 
@@ -182,6 +215,8 @@ $skyblue:#38AEF0;
         padding: 0px 30px;
         height:50px;
         float:right;
+        border: none;
+        margin-left: 15px;
       }
 
     }
