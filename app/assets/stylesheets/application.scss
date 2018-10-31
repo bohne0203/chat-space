@@ -102,69 +102,42 @@ $skyblue:#38AEF0;
       }
     }
 
-    .chat-block{
-      padding: 46px 40px 40px 40px;
-
-      .date{
-        list-style: none;
-
-        .user-name{
-          font-size: 16px;
-          font-weight: bold;
-          color: #434A54;
-          display: inline;
-        }
-        .day{
-          font-size: 12px;
-          color:#999999;
-          display: inline;
-          padding-left: 10px;
-        }
-        .time{
-          font-size: 12px;
-          color:#999999;
-          display: inline;
-        }
-      }
-
-      .text {
-        font-size: 14px;
-        color:#434A54;
-        padding-top: 10px;
-      }
-    }
-
     .chat-blocks{
-      @include padding;
-
-      .date{
-        list-style: none;
-
-        .user-name{
-          font-size: 16px;
-          font-weight: bold;
-          color: #434A54;
-          display: inline;
-        }
-        .day{
-          font-size: 12px;
-          color:#999999;
-          display: inline;
-          padding-left: 10px;
-        }
-        .time{
-          font-size: 12px;
-          color:#999999;
-          display: inline;
-        }
-      }
-
-      .text {
-        font-size: 14px;
-        color:#434A54;
-        padding-top: 10px;
-      }
+      padding: 46px 40px 0 40px;
+      height:calc(100% - 100px-90px);
+      overflow: scroll;
     }
+
+      .chat-block{
+        padding-bottom: 40px;
+        .date{
+          list-style: none;
+
+          .user-name{
+            font-size: 16px;
+            font-weight: bold;
+            color: #434A54;
+            display: inline;
+          }
+          .day{
+            font-size: 12px;
+            color:#999999;
+            display: inline;
+            padding-left: 10px;
+          }
+          .time{
+            font-size: 12px;
+            color:#999999;
+            display: inline;
+          }
+        }
+
+        .text {
+          font-size: 14px;
+          color:#434A54;
+          padding-top: 10px;
+        }
+      }
 
     .form{
       background-color:#DDDDDD;
