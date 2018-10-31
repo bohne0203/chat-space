@@ -11,20 +11,11 @@
             seo
           %ul.header-icon
             %li.icon
-              %a
+              %a{href:""}
                 %i.fa.fa-edit
                 %i.fa.fa-cog
         %div.messages
-          %a
-            %div.group
-              sample
-            %div.recent-message
-              最近のメッセージ
-          %a
-            %div.group
-              sample
-            %div.recent-message
-              最近のメッセージ
+          =render partial: 'messages/group'
       %div.chat
         %div.header
           %div.group-name
@@ -36,26 +27,8 @@
           %div.edit-button
             %a
               Edit
-        %div.chat-block
-          %ul.date
-            %li.user-name
-              Watanabe Ko
-            %li.day
-              2018/10/29
-            %li.time
-              20:28:46
-          %div.text
-            ここにチャットが入る
         %div.chat-blocks
-          %ul.date
-            %li.user-name
-              Watanabe Ko
-            %li.day
-              2018/10/29
-            %li.time
-              20:28:46
-          %div.text
-            ここにチャットが入る
+          =render partial: 'messages/chat-box'
         %div.form
           %form.chat
             %input.message{type: "text", placeholder: "type a message", name: "message-content"}
@@ -63,6 +36,3 @@
                 %i.fa.fa-image
                 %input#upload-icon.hidden-icon{type: "file", name: "image-content", style: "display: none"}
           %input.send-button{type: "submit",value:"Send"}
-
-
-  %footer
