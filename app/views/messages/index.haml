@@ -7,32 +7,32 @@
     %div.wrapper
       %div.side-bar
         %div.header
-          %h3.name
+          %h3.header__name
             seo
-          %ul.header-icon
-            %li.icon
+          %ul.header__icon
+            %li.header__icon__list
               %a{href:""}
                 %i.fa.fa-edit
                 %i.fa.fa-cog
-        %div.messages
+        %div.thread
           =render partial: 'messages/group'
       %div.chat
         %div.header
-          %div.group-name
+          %div.header__group-name
             sample
-            %ul.member-list
+            %ul.header__group-name__member
               Member:
-              %li.member
+              %li.header__group-name__member__list
                 me
-          %div.edit-button
+          %div.header__edit-button
             %a
               Edit
-        %div.chat-blocks
+        %div.messages
           =render partial: 'messages/chat-box'
         %div.form
-          %form.chat
-            %input.message{type: "text", placeholder: "type a message", name: "message-content"}
-              %label.upload-label{for: "upload-icon"}
+          %form.form__message
+            %input.form__message__text{type: "text", placeholder: "type a message", name: "message-content"}
+              %label.form__mask__image{for: "image-icon"}
                 %i.fa.fa-image
-                %input#upload-icon.hidden-icon{type: "file", name: "image-content", style: "display: none"}
-          %input.send-button{type: "submit",value:"Send"}
+                %input#image-icon.form__mask__image__icon{type: "file", name: "image-content", style: "display: none"}
+          %input.form__submit{type: "submit",value:"Send"}
