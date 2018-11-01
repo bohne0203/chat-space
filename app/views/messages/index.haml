@@ -1,0 +1,38 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %header
+  %body
+    %div.wrapper
+      %div.side-bar
+        %div.header
+          %h3.header__name
+            seo
+          %ul.header__icon
+            %li.header__icon__list
+              %a{href:""}
+                %i.fa.fa-edit
+                %i.fa.fa-cog
+        %div.thread
+          =render partial: 'messages/group'
+      %div.chat
+        %div.header
+          %div.header__group-name
+            sample
+            %ul.header__group-name__member
+              Member:
+              %li.header__group-name__member__list
+                me
+          %div.header__edit-button
+            %a
+              Edit
+        %div.messages
+          =render partial: 'messages/chat-box'
+        %div.form
+          %form.form__message
+            %input.form__message__text{type: "text", placeholder: "type a message", name: "message-content"}
+              %label.form__mask__image{for: "image-icon"}
+                %i.fa.fa-image
+                %input#image-icon.form__mask__image__icon{type: "file", name: "image-content", style: "display: none"}
+          %input.form__submit{type: "submit",value:"Send"}
