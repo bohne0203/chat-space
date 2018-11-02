@@ -25,9 +25,7 @@
               Member:
               %li.header__group-name__member__list
                 me
-          %div.header__edit-button
-            %a
-              Edit
+          %input.header__edit{ type: "button",value: "Edit"}
         %div.messages
           =render partial: 'messages/chat-box'
         %div.form
