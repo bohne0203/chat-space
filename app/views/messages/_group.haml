@@ -1,5 +1,8 @@
 %a{href:""}
-  %div.thread__group
-    sample
-  %div.thread__recent-message
-    最近のメッセージ
+  %group
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .div.thread__group
+          = group.name
+        %div.thread__recent-message
+          最近のメッセージ
