@@ -143,27 +143,41 @@
       width:100%;
       padding:20px 40px 20px 40px;
 
-
       &__message{
-        background-color: $white;
-        height:50px;
-        width:calc(100% - 116px);
-        box-sizing: border-box;
-        display: inline-block;
-
+        float: left;
+        width: calc(100% - 115px);
+        height: 50px;
+        position: relative;
 
         &__text{
-          height:100%;
-          width:calc(100% - 45px);
+          width: 100%;
           border:none;
+          height: 50px;
           font-size: 16px;
           color: #434A54;
-          padding-left: 10px;
-          display: inline-block;
+          padding:15px 10px;
+          box-sizing: border-box;
+        }
 
-          .fa.fa-image{
+        .form__mask__image{
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: inline-block;
+          width: 40px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          cursor: pointer;
+
+          .fa fa-picture-o icon{
             float:right;
-            font-size: 30px;
+            font-size: 20px;
+            line-height: 50px;
+          }
+
+          .hidden{
+            display: none;
           }
         }
       }
@@ -178,6 +192,8 @@
         float:right;
         border: none;
         margin-left: 15px;
+        display: inline-block;
+        width:100px;
       }
     }
 
