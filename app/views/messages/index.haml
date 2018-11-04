@@ -20,18 +20,20 @@
       %div.chat
         %div.header
           %div.header__group-name
-            sample
+            = @group.name
             %ul.header__group-name__member
               Member:
               %li.header__group-name__member__list
-                me
+                = @group.users.each_entry do |user|
+                  = user.name
           %input.header__edit{ type: "button",value: "Edit"}
         %div.messages
-          =render partial: 'messages/chat-box'
-        %div.form
-          %form.form__message
-            %input.form__message__text{type: "text", placeholder: "type a message", name: "message-content"}
-              %label.form__mask__image{for: "image-icon"}
-                %i.fa.fa-image
-                %input#image-icon.form__mask__image__icon{type: "file", name: "image-content", style: "display: none"}
-          %input.form__submit{type: "submit",value:"Send"}
+          =render @messages
+        .form
+          = form_for [@group, @message] do |f|
+            .form__message
+              = f.text_field :content, class:'form__message__text',placeholder: 'type a message'
+              = f.label :image, class: 'form__mask__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'
