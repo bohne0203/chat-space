@@ -1,7 +1,7 @@
 $(function() {
   function buildHTML(message){
 
-    var imageUrl = (message.image.url) ?`<img class="date__text__image" src="${message.image.url}">` : "";
+    var imageUrl = (message.image) ?`<img class="date__text__image" src="${message.image}">` : "";
     var html = `<div class="messages">
                   <ul class="date">
                     <li class="date__user-name">
@@ -36,10 +36,13 @@ $(function() {
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
-      $(".form__message")[0].reset();
+      $("#new_message")[0].reset();
     })
     .fail(function(){
       alert('メッセージを入力してください');
+    })
+    .always(function(){
+      $('.form__submit').prop('disabled',false)
     })
   })
 });
