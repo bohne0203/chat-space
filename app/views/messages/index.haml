@@ -1,6 +1,6 @@
-%div.wrapper
-  %div.side-bar
-    %div.header
+.wrapper
+  .side-bar
+    .header
       %h3.header__name
         = current_user.name
       %ul.header__icon
@@ -9,19 +9,20 @@
             = fa_icon 'edit', class: 'icon'
           = link_to edit_user_path(current_user) do
             = fa_icon 'cog', class: 'icon'
-    %div.thread
+    .thread
       =render partial: 'messages/group'
-  %div.chat
-    %div.header
-      %div.header__group-name
+  .chat
+    .header
+      .header__group-name
         = @group.name
         %ul.header__group-name__member
           Member:
           %li.header__group-name__member__list
             = @group.users.each_entry do |user|
               = user.name
-      %input.header__edit{ type: "button",value: "Edit"}
-    %div.messages
+      %button_tag.header__edit{ type: "button",value: "Edit"}
+        = "Edit"
+    .messages
       =render @messages
     .form
       = form_for [@group, @message] do |f|
