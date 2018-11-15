@@ -1,10 +1,10 @@
-%div.chat
+.chat{ "message-id": "#{message.id}"}
   %ul.date
     %li.date__user-name
       = message.user.name
     %li.date__day
       = message.created_at.strftime("%Y/%m/%d %H:%M")
-  %div.date__text
+  .date__text
     - if message.content.present?
       %p.date__text__content
         = message.content
