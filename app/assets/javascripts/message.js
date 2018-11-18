@@ -14,6 +14,7 @@ $(function() {
                         ${message.content}
                       </p>
                     ${imageUrl}
+                  </div>
                 </div>`
     return html;
   }
