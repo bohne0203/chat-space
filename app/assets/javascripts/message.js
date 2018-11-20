@@ -47,36 +47,36 @@ $(function() {
     })
   })
 
-   var interval = setInterval(function(){
-    var lastMessageId = $('.chat').last().attr('message-id');
-    var activeHTML = window.location.href;
+  //  var interval = setInterval(function(){
+  //   var lastMessageId = $('.chat').last().attr('message-id');
+  //   var activeHTML = window.location.href;
 
-    if (activeHTML.match(/\/groups\/\d+\/messages/)) {
+  //   if (activeHTML.match(/\/groups\/\d+\/messages/)) {
 
-      $.ajax ({
-        url: activeHTML,
-        type: 'GET',
-        data: { id: lastMessageId },
-        dataType: 'json',
-      })
+  //     $.ajax ({
+  //       url: activeHTML,
+  //       type: 'GET',
+  //       data: { id: lastMessageId },
+  //       dataType: 'json',
+  //     })
 
-      .done(function(newMessage){
-        var $messages = $('.messages');
-        var insertHTML = "";
-        newMessage.forEach(function(message) {
-          insertHTML += buildHTML(message);
-          $messages.append(insertHTML);
-          $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
-        });
-      })
+  //     .done(function(newMessage){
+  //       var $messages = $('.messages');
+  //       var insertHTML = "";
+  //       newMessage.forEach(function(message) {
+  //         insertHTML += buildHTML(message);
+  //         $messages.append(insertHTML);
+  //         $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
+  //       });
+  //     })
 
-      .fail(function() {
-        alert('自動更新に失敗しました');
-      })
-    } else {
-      clearInterval(interval)
-    }
-  } , 5000 );
+  //     .fail(function() {
+  //       alert('自動更新に失敗しました');
+  //     })
+  //   } else {
+  //     clearInterval(interval)
+  //   }
+  // } , 5000 );
 });
 
 
