@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'uppppp-load'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/uppppp-load'
+  config.fog_directory  = 'for-upload-chatspace'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/for-upload-chatspace'
 end
